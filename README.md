@@ -1,2 +1,2 @@
 # Jakub-portfolio
-💁‍♂️ Portfolio webpage for game-developer 
+💁‍♂️ Portfolio webpage for a game-developer 
