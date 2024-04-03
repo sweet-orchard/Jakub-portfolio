@@ -109,27 +109,29 @@ function transformMenu() {
 }
 
 // night mode
-let styleMode = localStorage.getItem("styleMode");
+let styleMode;
 let modeBtn = document.querySelector(".night-mode");
 
-const enableLightStyle = () => {
+function enableLightStyle() {
   document.body.classList.add("lightMode");
-  document.getElementById("closeBtn").style.backgroundImage =
-    "url(./images/icons/closeBlack.png)";
+  document.querySelectorAll(".closeBtn").forEach((element) => {
+    element.style.backgroundImage = "url(./images/icons/closeBlack.png)";
+  });
   document.querySelector(".night-mode").style.backgroundImage =
     "url(./images/icons/sun.png)";
 
   localStorage.setItem("styleMode", "light");
-};
+}
 
-const disableLightStyle = () => {
+function disableLightStyle() {
   document.body.classList.remove("lightMode");
   document.querySelector(".night-mode").style.backgroundImage =
     "url(./images/icons/moon.png)";
-  document.getElementById("closeBtn").style.backgroundImage =
-    "url(./images/icons/close.png)";
-  localStorage.setItem("styleMode", null);
-};
+  document.querySelectorAll(".closeBtn").forEach((element) => {
+    element.style.backgroundImage = "url(./images/icons/close.png)";
+  });
+  localStorage.removeItem("styleMode");
+}
 
 modeBtn.addEventListener("click", () => {
   styleMode = localStorage.getItem("styleMode");
