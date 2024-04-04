@@ -796,10 +796,6 @@ hr {
   .about-me p {
     text-align: center;
   }
-
-  .about-me {
-    gap: 0;
-  }
 }
 
 @media (max-width: 650px) {
@@ -831,7 +827,8 @@ hr {
   }
 
   .technical-skills {
-    max-width: 250px;
+    max-width: 280px;
+    margin-top: 0px;
   }
 
   /* .box > img {
@@ -913,6 +910,7 @@ hr {
 }
 
 .mini-description > a > button {
+  margin-top: 10px;
   font-size: 1.6rem;
 }
 
@@ -952,7 +950,7 @@ hr {
     margin-left: 0;
   }
 
-  #closeBtn {
+  .closeBtn {
     right: 25px;
     margin-left: 10px;
   }
